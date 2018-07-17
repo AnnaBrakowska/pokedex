@@ -1,0 +1,46 @@
+@keyframes yellowLight {
+    from { 
+        background:radial-gradient(white,gray);
+
+    }
+    to {
+        background: radial-gradient(white, rgb(253, 237, 5));
+
+    }
+}
+
+@keyframes greenLight {
+    from { 
+        background:radial-gradient(white,gray);
+
+    }
+    to {
+        background: radial-gradient(white, green);
+
+    }
+}
+
+
+@keyframes redLight {
+    from { 
+        background:radial-gradient(white,gray);
+
+    }
+    to {
+        background: radial-gradient(white, red);
+
+    }
+}
+
+
+
+@keyframes light {
+    from { 
+        background:radial-gradient(white,rgb(56, 56, 87));
+
+    }
+    to {
+        background: radial-gradient(white, lightblue);
+
+    }
+}
