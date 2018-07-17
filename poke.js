@@ -24,12 +24,16 @@ class Pokemon {
 //SEARCH BAR
 let temporaryPokemon=[]; 
 searchButton.addEventListener("click", (e) => {
+
     let searchPokemon = document.getElementById("searchPokemon").value;
     let searchButton = document.getElementById("searchButton");
     let imageFound = document.getElementById("imageFound");
 
+
     axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/" + searchPokemon +".json").then((response) => {
+        // console.log(response.data.sprites['front_shiny']);
         imageFound.src = response.data.sprites['front_shiny'];
+
         let image = response.data.sprites['front_shiny'];
         let attack = response.data.stats[4]['base_stat'];
         let hp = response.data.stats[5]['base_stat'];
@@ -38,6 +42,7 @@ searchButton.addEventListener("click", (e) => {
         let defense = response.data.stats[3]['base_stat'];
         let newPokemon = new Pokemon(name, hp, attack, image, defense, abilities);
         temporaryPokemon.push(newPokemon);
+
     });
 });
 
@@ -105,6 +110,8 @@ let info = document.getElementsByClassName("info1");
 
 start.addEventListener("click", (e) => {
      if(anna.myBall.length===0){
+         
+        console.log("Add some pokemons to your pokedex");
          alert('Add some pokemons to your pokedex');
      }
     // //OFF
@@ -150,7 +157,9 @@ start.addEventListener("click", (e) => {
         document.getElementsByClassName("gallery")[0].setAttribute('src', anna.myBall[0].image);
         counterPower++;
     } 
+
     console.log("On/Off" + anna.myBall);
+
 });
 
 
@@ -175,6 +184,7 @@ next.addEventListener("click", (e) => {
         counterInfo = 0;
     }
 
+    console.log(counterInfo + "BEFORE NEXT");
     gallery[0].setAttribute('src', anna.myBall[counterInfo].image);
     one.innerText = "Name: " + anna.myBall[counterInfo].name;
     two.innerText = "Hp: " + anna.myBall[counterInfo].hp;
@@ -182,6 +192,8 @@ next.addEventListener("click", (e) => {
     four.innerText = "Defense: " + anna.myBall[counterInfo].defense;
     five.innerText = "Ability: " + anna.myBall[counterInfo].abilities;
     nextPokemon.play();
+    console.log(counterInfo + "AFTER NEXT");
+
 
 });
 
@@ -192,8 +204,13 @@ previous.addEventListener("click", (e) => {
         counterInfo = anna.myBall;
     }
 
+    console.log(counterInfo + "BEFORE DECREASE");// return 2
     counterInfo -= 1; // decrease the count
+    console.log(counterInfo + "AFTER DECREASE"); // return 1
+
     gallery[0].setAttribute('src', anna.myBall[counterInfo].image);
+    console.log(counterInfo + "AFTER IMAGE"); // return 1
+
     one.innerText = "Name: " + anna.myBall[counterInfo].name;
     two.innerText = "Hp: " + anna.myBall[counterInfo].hp;
     three.innerText = "Attack: " + anna.myBall[counterInfo].attack;
@@ -207,7 +224,7 @@ previous.addEventListener("click", (e) => {
 // DISPLAY 'EM ALL!
 
 let counterDis = 0;
-let list = document.getElementsByClassName("col-m-12");
+let list = document.getElementsByClassName("col-md-4");
 let button = document.getElementById("button");
 let container = document.getElementById("container");
 
@@ -220,6 +237,7 @@ button.addEventListener("click", (e) => {
         list[0].appendChild(title);
         console.log(counterDis);
         
+    
         for (let i = 0; i < anna.myBall.length; i++) {
             let infoDiv = document.createElement("div");
             infoDiv.innerHTML = "<div>" + '<img src="' + anna.myBall[i].image + '"></img>' + "<span>" + "<strong>" + "Name: " + "</strong>" + anna.myBall[i].name + "</span>" + "<span>" + "<strong>" + " HP: " + "</strong>" + anna.myBall[i].hp + "</span>" + "<span>" + "<strong>" + " Attack: " + "</strong>" + anna.myBall[i].attack + "</span>" + "<span><strong> Ability: </strong><" + anna.myBall[i].abilities + "/span>" + "<span><strong> Defense: " + anna.myBall[i].defense + "</strong></span>" + "</div>";
@@ -238,6 +256,6 @@ button.addEventListener("click", (e) => {
             list[0].appendChild(infoDiv);
         }
     } counterDis++;
-    
+    console.log(counterDis);
 });
 
