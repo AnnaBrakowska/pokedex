@@ -1,0 +1,275 @@
+@import "_fonts.scss";
+@import "_keyframes.scss";
+
+$shadow: rgba(0,0,0,0.1);
+$button-shadow:0.5px 0.5px 0.5px 0.5px gray;
+$next-shadow:2px 1px 1px 1px gray;
+
+body {
+    background-image:url('background.png');
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-color:#348C59;
+
+    #searchResult {
+        width:150px;
+        height:120px;
+        border:4px solid gray;
+        box-shadow: inset 2px 3px 20px gray;
+        position:relative;
+        left:80px;
+        border-radius: 50px;
+        background:white;
+        display:flex;
+        justify-content: center;
+    }
+    #bubble1 {
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        position:relative;
+        border:3px solid gray;
+        background:white;
+        box-shadow: inset 2px 3px 10px gray;
+        left:200px;
+    }
+    #bubble2 {
+        width:15px;
+        height:15px;
+        border-radius:50%;
+        position:relative;
+        border:3px solid gray;
+        background:white;
+        box-shadow: inset 2px 3px 5px gray;
+        left:230px;
+    }
+    #searchPokemon {
+        margin-top:20px;
+        position:relative;
+        left:70px;
+    }
+    #searchButton {
+        position:relative;
+        left:70px;
+    }
+    #addButton {
+        position:relative;
+        left:70px;
+    }
+
+    #container {
+       padding-bottom:-10px;
+        text-align: center;
+    }
+
+    #pokedex {
+        top:-180px;
+        width: 400px;
+        height: 600px;
+        left:20%;
+        position: relative;
+        background-color: #C0200D;
+        border-radius:25px 25px 25px 120px;
+        box-shadow: 0px 0px 0px $shadow
+        , 1px -1px 0px $shadow
+        , 2px -2px 0px $shadow
+        , 2px -2px 0px $shadow
+        , 3px -3px 0px $shadow
+        , 4px -4px 0px $shadow
+        , 5px -5px 0px $shadow
+        , 6px -6px 0px $shadow
+        , 7px -7px 0px $shadow
+        , 8px -8px 0px $shadow
+        , 9px -9px 0px $shadow
+        , 10px -10px 0px $shadow
+        , 11px -11px 0px $shadow
+        , 12px -12px 0px $shadow
+        , 13px -13px 0px $shadow
+        , 14px -14px 0px $shadow
+        , 15px -15px 0px $shadow
+        , 16px -16px 0px $shadow
+        , 17px -17px 0px$shadow
+        , 18px -18px 0px $shadow
+        , 19px -19px 0px $shadow
+        , 20px -20px 0px red;
+        transform: translateX(50%);
+
+            #light {
+                border-radius:50%;
+                background: radial-gradient(rgb(177, 252, 252), gray);
+                border:7px solid white;
+                box-shadow:2px 1px 5px 1px lightgray;
+                position:relative;
+                height:50px;
+                width:50px;
+                left:30px;
+                top:15px;
+            }   
+
+            #yellow {
+                border-radius:50%;
+                height:25px;
+                width:25px;
+                background:radial-gradient(white, gray);
+                position:relative;
+                top:-37px;
+                left:130px;
+                box-shadow:1px 1px 1px 1px gray;
+            }
+
+            #green {
+                border-radius:50%;
+                height:25px;
+                width:25px;
+                background:radial-gradient(white,gray);
+                position:relative;
+                left:170px;
+                top:-62px;
+                box-shadow:1px 1px 1px 1px gray;
+            }
+
+            #red {
+                border-radius:50%;
+                height:25px;
+                width:25px;
+                background:radial-gradient(white,gray);
+                position:relative;
+                left:210px;
+                top:-87px;
+                box-shadow:1px 1px 1px 1px gray;
+            }
+
+            #speaker-main {
+            position:relative;
+            left:170px;
+            top:-50px;
+
+                .speaker {
+                    width:50px;
+                    height:3px;
+                    background-color:rgb(44, 40, 40);
+                    position:relative;
+                    margin:5px;
+                    border-bottom:1px solid gray;
+                }
+            }
+
+            #display-main {
+                background-color: gray;
+                width:300px;
+                height:360px;
+                position:relative;
+                top:-45px;
+                left:12%;
+                border-radius:10px;
+                box-shadow:inset 2px 2px 10px 3px black;
+            
+                #display {
+                    background-color:lightgray;
+                    border:1px solid black;
+                    position:relative;
+                    height:200px;
+                    width:220px;
+                    border-radius:10px;
+                    top:20px;
+                    left:13%;
+                    display:flex;
+                    justify-content: center;
+
+                    .gallery {
+                        height:180px;
+                        width:200px;
+                    }    
+                }    
+
+                #info {
+                    background: #9bbc0f;
+                    width:220px;
+                    position: relative;
+                    height:100px;
+                    border:1px solid black;
+                    top:30px;
+                    left:13%;
+                    border-radius:25px;
+                    font-family:nintendo;
+                    font-size:7.5px;
+
+                    .info1 {
+                        position:relative;
+                        top: 7px;
+                        left:20px;
+                        color:#0f380f;
+                        margin:3px;
+                        
+                    }
+                }
+            }     
+                #brand {
+                    font-family: nintendoItalic;
+                    font-size:15px;
+                    position:relative;
+                    left:40px;
+                    top:-35px;
+                    border:2px solid black;
+                    width:20%;
+                    text-align: center;
+                    border-radius:20px;
+                }
+
+                #previous {
+                    width:100px;
+                    height:30px;
+                    position:relative;
+                    top:-20px;
+                    left:90px;
+                    border-radius:10px 25px;
+                    box-shadow:$next-shadow;
+                    font-family:nintendoBold;
+                    font-size:15px;
+                }
+
+                #next {
+                    width:100px;
+                    height:30px;
+                    position:relative;
+                    left:110px;
+                    top:-20px;
+                    border-radius:25px 10px;
+                    box-shadow:$next-shadow;
+                    font-family:nintendoBold;
+                    font-size:15px;
+                }
+
+                #start {
+                    position:relative;
+                    top:12px;
+                    left:-60px;
+                    font-family: nintendoBold;
+                    height:10px;
+                    box-shadow: $button-shadow;
+                    font-size:10px;
+                }
+
+                #button {
+                    left:-55px;
+                    position:relative;
+                    top:12px;
+                    font-family: nintendoBold;
+                    height:10px;
+                    font-size:10px;
+                    box-shadow: $button-shadow;
+                }  
+            }    
+
+    #container-bottom {
+        margin-top:-170px;
+        background-color:#348C59;
+        font-size: 12px;
+        color:white;
+        .col-centered {
+            margin: 0 auto;
+            float:left;
+            
+        }
+    }    
+}
