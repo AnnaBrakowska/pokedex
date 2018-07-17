@@ -1,0 +1,230 @@
+@font-face {
+  font-family: nintendo;
+  src: url(prstart.ttf); }
+@font-face {
+  font-family: nintendoBold;
+  src: url(nintendoBold.otf); }
+@font-face {
+  font-family: nintendoItalic;
+  src: url(brand.ttf); }
+@keyframes yellowLight {
+  from {
+    background: radial-gradient(white, gray); }
+  to {
+    background: radial-gradient(white, #fded05); } }
+@keyframes greenLight {
+  from {
+    background: radial-gradient(white, gray); }
+  to {
+    background: radial-gradient(white, green); } }
+@keyframes redLight {
+  from {
+    background: radial-gradient(white, gray); }
+  to {
+    background: radial-gradient(white, red); } }
+@keyframes light {
+  from {
+    background: radial-gradient(white, #383857); }
+  to {
+    background: radial-gradient(white, lightblue); } }
+body {
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #348C59; }
+  body #searchResult {
+    width: 150px;
+    height: 120px;
+    border: 4px solid gray;
+    box-shadow: inset 2px 3px 20px gray;
+    position: relative;
+    left: 80px;
+    border-radius: 50px;
+    background: white;
+    display: flex;
+    justify-content: center; }
+  body #bubble1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    border: 3px solid gray;
+    background: white;
+    box-shadow: inset 2px 3px 10px gray;
+    left: 200px; }
+  body #bubble2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    border: 3px solid gray;
+    background: white;
+    box-shadow: inset 2px 3px 5px gray;
+    left: 230px; }
+  body #searchPokemon {
+    margin-top: 20px;
+    position: relative;
+    left: 70px; }
+  body #searchButton {
+    position: relative;
+    left: 70px; }
+  body #addButton {
+    position: relative;
+    left: 70px; }
+  body #container {
+    padding-bottom: -10px;
+    text-align: center; }
+  body #pokedex {
+    top: -180px;
+    width: 400px;
+    height: 600px;
+    left: 20%;
+    position: relative;
+    background-color: #C0200D;
+    border-radius: 25px 25px 25px 120px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1), 1px -1px 0px rgba(0, 0, 0, 0.1), 2px -2px 0px rgba(0, 0, 0, 0.1), 2px -2px 0px rgba(0, 0, 0, 0.1), 3px -3px 0px rgba(0, 0, 0, 0.1), 4px -4px 0px rgba(0, 0, 0, 0.1), 5px -5px 0px rgba(0, 0, 0, 0.1), 6px -6px 0px rgba(0, 0, 0, 0.1), 7px -7px 0px rgba(0, 0, 0, 0.1), 8px -8px 0px rgba(0, 0, 0, 0.1), 9px -9px 0px rgba(0, 0, 0, 0.1), 10px -10px 0px rgba(0, 0, 0, 0.1), 11px -11px 0px rgba(0, 0, 0, 0.1), 12px -12px 0px rgba(0, 0, 0, 0.1), 13px -13px 0px rgba(0, 0, 0, 0.1), 14px -14px 0px rgba(0, 0, 0, 0.1), 15px -15px 0px rgba(0, 0, 0, 0.1), 16px -16px 0px rgba(0, 0, 0, 0.1), 17px -17px 0px rgba(0, 0, 0, 0.1), 18px -18px 0px rgba(0, 0, 0, 0.1), 19px -19px 0px rgba(0, 0, 0, 0.1), 20px -20px 0px red;
+    transform: translateX(50%); }
+    body #pokedex #light {
+      border-radius: 50%;
+      background: radial-gradient(#b1fcfc, gray);
+      border: 7px solid white;
+      box-shadow: 2px 1px 5px 1px lightgray;
+      position: relative;
+      height: 50px;
+      width: 50px;
+      left: 30px;
+      top: 15px; }
+    body #pokedex #yellow {
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+      background: radial-gradient(white, gray);
+      position: relative;
+      top: -37px;
+      left: 130px;
+      box-shadow: 1px 1px 1px 1px gray; }
+    body #pokedex #green {
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+      background: radial-gradient(white, gray);
+      position: relative;
+      left: 170px;
+      top: -62px;
+      box-shadow: 1px 1px 1px 1px gray; }
+    body #pokedex #red {
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+      background: radial-gradient(white, gray);
+      position: relative;
+      left: 210px;
+      top: -87px;
+      box-shadow: 1px 1px 1px 1px gray; }
+    body #pokedex #speaker-main {
+      position: relative;
+      left: 170px;
+      top: -50px; }
+      body #pokedex #speaker-main .speaker {
+        width: 50px;
+        height: 3px;
+        background-color: #2c2828;
+        position: relative;
+        margin: 5px;
+        border-bottom: 1px solid gray; }
+    body #pokedex #display-main {
+      background-color: gray;
+      width: 300px;
+      height: 360px;
+      position: relative;
+      top: -45px;
+      left: 12%;
+      border-radius: 10px;
+      box-shadow: inset 2px 2px 10px 3px black; }
+      body #pokedex #display-main #display {
+        background-color: lightgray;
+        border: 1px solid black;
+        position: relative;
+        height: 200px;
+        width: 220px;
+        border-radius: 10px;
+        top: 20px;
+        left: 13%;
+        display: flex;
+        justify-content: center; }
+        body #pokedex #display-main #display .gallery {
+          height: 180px;
+          width: 200px; }
+      body #pokedex #display-main #info {
+        background: #9bbc0f;
+        width: 220px;
+        position: relative;
+        height: 100px;
+        border: 1px solid black;
+        top: 30px;
+        left: 13%;
+        border-radius: 25px;
+        font-family: nintendo;
+        font-size: 7.5px; }
+        body #pokedex #display-main #info .info1 {
+          position: relative;
+          top: 7px;
+          left: 20px;
+          color: #0f380f;
+          margin: 3px; }
+    body #pokedex #brand {
+      font-family: nintendoItalic;
+      font-size: 15px;
+      position: relative;
+      left: 40px;
+      top: -35px;
+      border: 2px solid black;
+      width: 20%;
+      text-align: center;
+      border-radius: 20px; }
+    body #pokedex #previous {
+      width: 100px;
+      height: 30px;
+      position: relative;
+      top: -20px;
+      left: 90px;
+      border-radius: 10px 25px;
+      box-shadow: 2px 1px 1px 1px gray;
+      font-family: nintendoBold;
+      font-size: 15px; }
+    body #pokedex #next {
+      width: 100px;
+      height: 30px;
+      position: relative;
+      left: 110px;
+      top: -20px;
+      border-radius: 25px 10px;
+      box-shadow: 2px 1px 1px 1px gray;
+      font-family: nintendoBold;
+      font-size: 15px; }
+    body #pokedex #start {
+      position: relative;
+      top: 12px;
+      left: -60px;
+      font-family: nintendoBold;
+      height: 10px;
+      box-shadow: 0.5px 0.5px 0.5px 0.5px gray;
+      font-size: 10px; }
+    body #pokedex #button {
+      left: -55px;
+      position: relative;
+      top: 12px;
+      font-family: nintendoBold;
+      height: 10px;
+      font-size: 10px;
+      box-shadow: 0.5px 0.5px 0.5px 0.5px gray; }
+  body #container-bottom {
+    margin-top: -170px;
+    background-color: #348C59;
+    font-size: 12px;
+    color: white; }
+    body #container-bottom .col-centered {
+      margin: 0 auto;
+      float: left; }
+      
+/*# sourceMappingURL=pokedex.css.map */
