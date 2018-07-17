@@ -219,12 +219,12 @@ body {
       font-size: 10px;
       box-shadow: 0.5px 0.5px 0.5px 0.5px gray; }
   body #container-bottom {
-    margin-top: -170px;
+    margin-top: -70px;
     background-color: #348C59;
     font-size: 12px;
     color: white; }
     body #container-bottom .col-centered {
       margin: 0 auto;
       float: left; }
-      
-/*# sourceMappingURL=pokedex.css.map */
+
+/*# sourceMappingURL=poke.css.map */
