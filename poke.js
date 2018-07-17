@@ -105,8 +105,6 @@ let info = document.getElementsByClassName("info1");
 
 start.addEventListener("click", (e) => {
      if(anna.myBall.length===0){
-         
-        console.log("Add some pokemons to your pokedex");
          alert('Add some pokemons to your pokedex');
      }
     // //OFF
