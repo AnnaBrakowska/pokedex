@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pokedex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="poke.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="poke.css" />
 </head>
 
 <body>
-
     <!-- BOOTSTRAP ALERT -->
     <div id="container">
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -25,11 +24,15 @@
         </div>
     </div>
 
-    <div id="searchResult"><img src="" alt="" id="imageFound"></div>
+    <div id="searchResult">
+        <img src="" alt="" id="imageFound">
+    </div>
     <div id="bubble1"></div>
     <div id="bubble2"></div>
     <input type="text" placeholder="Search.." name="search" id="searchPokemon">
-    <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+    <button type="submit" id="searchButton">
+        <i class="fa fa-search"></i>
+    </button>
     <button type="submit" id="addButton">Add</button>
 
     <!-- SOUNDS -->
@@ -48,7 +51,7 @@
             <div class="speaker"></div>
         </div>
 
-    <!-- DISPLAY -->
+        <!-- DISPLAY -->
         <div id="display-main">
             <div id="display">
                 <img src="" alt="pokemon" class="gallery" style="display:none">
@@ -71,9 +74,9 @@
     </div>
 
     <div id="container-bottom">
-            <div class="row"> 
-                <div class="col-m-12 col-centered"></div>
-            </div>
+        <div class="row">
+            <div class="col-m-12 col-centered"></div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
