@@ -238,6 +238,6 @@ button.addEventListener("click", (e) => {
             list[0].appendChild(infoDiv);
         }
     } counterDis++;
-    console.log(counterDis);
+    
 });
 
