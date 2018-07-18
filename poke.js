@@ -277,3 +277,4 @@ searchButtonPokedex.addEventListener("click", (e)=> {
 
 
 });
+
