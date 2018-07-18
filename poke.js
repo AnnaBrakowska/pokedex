@@ -74,8 +74,7 @@ class Trainer {
 
         for (let i = 0; i < this.myBall.length; i++) {
             if (this.myBall[i]['name'] === someName) {
-                // console.log(hasOwnProperty);
-                console.log(this.myBall[i]);
+                return this.myBall[i];
             }
         }
     }
@@ -259,3 +258,22 @@ button.addEventListener("click", (e) => {
     console.log(counterDis);
 });
 
+// POKEDEX SEARCH
+
+
+let searchButtonPokedex = document.getElementById("searchButtonPokedex");
+
+searchButtonPokedex.addEventListener("click", (e)=> {
+    let searchPokedex = document.getElementById("searchPokedex").value;
+    let pokemonFound=document.getElementById("pokemonFound");
+    let pokemonReturned = anna.get(searchPokedex);
+
+    pokemonFound.src=pokemonReturned['image'];
+    searchPokedex.reset();
+
+    console.log(pokemonReturned['image']);
+    // pokemonFound.src=anna.get(searchPokedex).image;
+    // console.log(pokemonReturned.image);
+
+
+});
